@@ -1,0 +1,668 @@
+/* Custom Styles for Monkey Waffle Co. */
+
+/* Accessibility Utilities */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-icon {
+    font-size: 15rem;
+    color: #FFC107;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Menu Cards */
+.menu-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.price-tag {
+    background: linear-gradient(45deg, #FFC107, #FF8F00);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    display: inline-block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Belgian Waffle Menu Styles */
+.menu-category {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-subtitle {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.veg-icon {
+    font-size: 1rem;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 20px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.section-title.text-danger {
+    color: #e74c3c !important;
+}
+
+.section-title.text-info {
+    color: #3498db !important;
+}
+
+.section-title.ice-cream-title {
+    color: #5dade2;
+    background: linear-gradient(135deg, #5dade2, #85c1e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subsection-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #34495e;
+    margin: 15px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.subsection-title.gourmet {
+    background: linear-gradient(45deg, #8e44ad, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dotted #bdc3c7;
+    margin-bottom: 5px;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.item-name {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    flex: 1;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1rem;
+}
+
+.star {
+    color: #f39c12;
+    font-size: 0.8rem;
+}
+
+.new-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.add-ice-cream-banner {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.mini-combo {
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.combo-description {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.combo-description p {
+    margin-bottom: 5px;
+}
+
+.combo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.combo-name {
+    font-weight: 600;
+    color: #495057;
+}
+
+.combo-price {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1.1rem;
+}
+
+.extra-goodness {
+    background: linear-gradient(135deg, #fdcb6e, #e17055);
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.extra-goodness .section-title {
+    color: white !important;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.extras-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.extra-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.extra-name {
+    color: white;
+}
+
+.extra-price {
+    font-weight: bold;
+    color: #fff3cd;
+}
+
+/* Menu Section Background */
+#menu {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Mobile Responsiveness for Menu */
+@media (max-width: 768px) {
+    .category-title {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.1rem;
+    }
+    
+    .extras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .item-name {
+        font-size: 0.85rem;
+    }
+    
+    .item-price {
+        font-size: 0.9rem;
+    }
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFC107 !important;
+}
+
+/* Buttons */
+.btn-warning {
+    background: linear-gradient(45deg, #FFC107, #FF8F00);
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(45deg, #FF8F00, #F57C00);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Feature Cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* About Section */
+.about-icon {
+    font-size: 12rem;
+    color: #FFC107;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Social Links */
+.social-links a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: #FFC107 !important;
+    transform: translateY(-3px);
+}
+
+/* Typography */
+.display-3, .display-4, .display-6 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-icon {
+        font-size: 8rem;
+    }
+    
+    .about-icon {
+        font-size: 6rem;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+/* Custom Waffle Pattern Background */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
+}
+
+/* Loading Animation for Icons */
+.fas, .fab {
+    transition: all 0.3s ease;
+}
+
+.card:hover .fas {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Footer Styling */
+footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #FFC107, #FF8F00);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #FF8F00, #F57C00);
+}
+
+/* Discount Popup Styles */
+.discount-popup {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: 3px solid #FFC107;
+}
+
+.discount-popup .modal-header {
+    background: linear-gradient(135deg, #FFC107, #FF8F00);
+    border-radius: 17px 17px 0 0;
+}
+
+.discount-popup .btn-close {
+    color: white;
+    opacity: 0.8;
+}
+
+.discount-popup .btn-close:hover {
+    opacity: 1;
+}
+
+.discount-content h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.discount-content h3 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(231, 76, 60, 0.3);
+}
+
+.coupon-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px dashed #FFC107;
+}
+
+.coupon-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.coupon-input {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+    border: 2px solid #FFC107;
+    color: #e67e22;
+    max-width: 150px;
+}
+
+.coupon-input:focus {
+    border-color: #FF8F00;
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+/* Delivery Partners Carousel */
+.delivery-partner {
+    padding: 20px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.delivery-partner:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.partner-logo:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: #FFC107;
+    transform: scale(1.05);
+}
+
+.partner-logo h5 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    color: #2c3e50;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #FFC107;
+    border-radius: 50%;
+    padding: 20px;
+    background-size: 40% 40%;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #FF8F00;
+    transform: scale(1.1);
+}
+
+/* Popup Animation */
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal.fade .modal-dialog {
+    animation: popupFadeIn 0.5s ease-out;
+}
+
+/* Responsive Design for Delivery Partners */
+@media (max-width: 768px) {
+    .partner-logo {
+        padding: 20px 15px;
+    }
+    
+    .partner-logo i {
+        font-size: 2rem !important;
+    }
+    
+    .discount-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .discount-content h3 {
+        font-size: 2rem;
+    }
+    
+    .coupon-code-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .coupon-input {
+        max-width: 200px;
+    }
+}
+
+/* Floating effect for gift icon */
+@keyframes float {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.discount-content .fa-gift {
+    animation: float 2s ease-in-out infinite;
+}
